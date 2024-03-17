@@ -29,14 +29,14 @@ public class Main {
     }
 
     public static int findYear(OffsetDateTime dateTime) {
-        return  dateTime.getYear();
+        return dateTime.getYear();
     }
 
     public static int findMonth(OffsetDateTime dateTime) {
-        return  dateTime.getMonthValue();
+        return dateTime.getMonthValue();
     }
 
     public static int findayOfMonth(OffsetDateTime dateTime) {
-        return  dateTime.getDayOfMonth();
+        return dateTime.getDayOfMonth();
     }
 }

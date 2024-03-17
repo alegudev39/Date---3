@@ -1,12 +1,11 @@
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import java.time.OffsetDateTime;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class MainTest {
 
-    @Test
-    void parseDate(String dateString) {
-    }
 
     @Test
     void testFindYear() {
@@ -14,7 +13,7 @@ class MainTest {
         int calculatedYear = Main.findYear(dateString);
         int fixedControlYear = 2023;
 
-        assertEquals(fixedControlYear , calculatedYear);
+        assertEquals(fixedControlYear, calculatedYear);
 
     }
 
@@ -24,7 +23,7 @@ class MainTest {
         int calculatedYear = Main.findYear(dateString);
         int fixedControlYear = 2021;
 
-        assertEquals(fixedControlYear , calculatedYear);
+        assertEquals(fixedControlYear, calculatedYear);
 
     }
 
@@ -34,7 +33,7 @@ class MainTest {
         int calculatedMonth = Main.findMonth(dateString);
         int fixedControlMonth = 3;
 
-        assertEquals(fixedControlMonth , calculatedMonth);
+        assertEquals(fixedControlMonth, calculatedMonth);
 
     }
 
@@ -45,17 +44,8 @@ class MainTest {
         int calculatedDayOfMonth = Main.findayOfMonth(dateString);
         int fixedControlDayOfMonth = 1;
 
-        assertEquals(fixedControlDayOfMonth , calculatedDayOfMonth);
+        assertEquals(fixedControlDayOfMonth, calculatedDayOfMonth);
 
     }
 
-
-
-    @Test
-    void findMonth() {
-    }
-
-    @Test
-    void findayOfMonth() {
-    }
 }
