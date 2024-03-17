@@ -12,7 +12,7 @@ public class Main {
 
         String dateString = "2023-03-01T13:00:00Z";
         DateTimeFormatter formatter = DateTimeFormatter.ISO_OFFSET_DATE_TIME;
-        OffsetDateTime dateTime = OffsetDateTime.parse(dateString, formatter);
+        OffsetDateTime dateTime = parseDate(dateString, formatter);
 
 
         System.out.println("Anno: " + dateTime.getYear());
@@ -20,5 +20,23 @@ public class Main {
         System.out.println("Giorno: " + dateTime.getDayOfMonth());
         System.out.println("Giorno della settimana: " + dateTime.getDayOfWeek().getValue());
 
+        System.out.println(findYear(dateTime));
+
+    }
+
+    public static OffsetDateTime parseDate(String dateString, DateTimeFormatter formatter) {
+        return OffsetDateTime.parse(dateString, formatter);
+    }
+
+    public static int findYear(OffsetDateTime dateTime) {
+        return dateTime.getYear();
+    }
+
+    public static int findMonth(OffsetDateTime dateTime) {
+        return dateTime.getMonthValue();
+    }
+
+    public static int findayOfMonth(OffsetDateTime dateTime) {
+        return dateTime.getDayOfMonth();
     }
 }
